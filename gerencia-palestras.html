@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="GerenciaPalestras">
+<html ng-app="GerenciaPalestras"">
 <head>
 <meta charset="UTF-8">
 <title>Gerência de Palestras</title>
@@ -23,70 +23,20 @@
 
 </style>
 
-<script src="resources/js/jquery-2.1.4.js"></script>
-<script src="resources/js/bootstrap.js"></script>
-<script src="resources/js/angular.js"></script>
+<script type="text/javascript" src="resources/js/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="resources/js/bootstrap.js"></script>
+<script type="text/javascript" src="resources/js/angular.js"></script>
 
-<script type="text/javascript">
-	var app = angular.module("GerenciaPalestras", []);
-
-	app.controller("GerenciaPalestrasController", function($scope) {
-		$scope.titulo = "Gerenciamento de Palestras"
-
-		$scope.palestras = [ 
-		                     
-			{
-				"id" : 1,
-				"nome" : "Conhecendo Angular JS",
-				"autor" : "André Thiago"
-			}, 
-			{
-				"id" : 2,
-				"nome" : "Apresentando Spring MVC",
-				"autor" : "Roy Johnson"
-			}, 
-			{
-				"id" : 3,
-				"nome" : "Mapeamento ORM com Hibernate",
-				"autor" : "Gavin King"
-			}, 
-			{
-				"id" : 4,
-				"nome" : "Modelando com base em DDD",
-				"autor" : "Eric Evans"
-			}, 
-			{
-				"id" : 5,
-				"nome" : "Microservice Patterns",
-				"autor" : "Martin Fowler"
-			} 
-		];
-		
-		$scope.adicionarPalestra = function(palestra) {
-			//$scope.palestras.push({"nome": $scope.nome, "autor": $scope.autor}); <-- Evitar ler do $scope no controller: além de ficar menos claro, dificulta a elaboração de testes de unidade
-			//$scope.palestras.push({"nome": nome, "autor": autor});
-			palestra.id = $scope.palestras.length;
-			$scope.palestras.push(palestra);
-			delete $scope.palestra;
-		}
-		
-		$scope.temPalestraSelecionada = function(palestras) {
-			return $scope.palestras.some(function (palestra){
-				return palestra.selecionada;
-			});
-		}
-	});
-</script>
-
+<script type="text/javascript" src="app/app.module.js"></script>
+<script type="text/javascript" src="app/GerenciaPalestrasController.js"></script>
 
 </head>
 <body ng-controller="GerenciaPalestrasController">
 
 	<div class="container">
 
-		<!-- 	<h1 ng-bind="titulo"></h1> -->
 		<div class="jumbotron">
-			<h1>{{titulo}}</h1>
+			<h2>{{titulo}}</h2>
 		</div>
 
 
