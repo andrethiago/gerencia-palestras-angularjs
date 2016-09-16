@@ -34,7 +34,7 @@ angular.module("GerenciaPalestras").controller("GerenciaPalestrasController", fu
 			delete $scope.palestra;
 		}
 		
-		$scope.temPalestraSelecionada = function(palestras) {
+		$scope.temPalestraSelecionada = function() {
 			return $scope.palestras.some(function (palestra){
 				return palestra.selecionada;
 			});
