@@ -14,7 +14,7 @@
 	div.container {
 		margin-left: auto;
 		margin-right: auto;
-		width: 600px;
+		width: 700px;
 	}
 
 	.form-control {
@@ -29,6 +29,7 @@
 
 <script type="text/javascript" src="app/app.module.js"></script>
 <script type="text/javascript" src="app/GerenciaPalestrasController.js"></script>
+<script type="text/javascript" src="app/PalestraService.js"></script>
 
 </head>
 <body ng-controller="GerenciaPalestrasController">
@@ -46,12 +47,16 @@
 				<th></th>
 				<th>Nome</th>
 				<th>Autor</th>
+				<th>Sala</th>
+				<th>Data</th>
 			</tr>
 			<tr ng-class="{warning : palestra.selecionada}" ng-repeat="palestra in palestras">
 				<th>{{$index + 1}}</th>
 				<th><input type="checkbox" ng-model="palestra.selecionada" /></th>
 				<td>{{palestra.nome}}</td>
 				<td>{{palestra.autor}}</td>
+				<td>{{palestra.sala}}</td>
+				<td>{{palestra.dataHora | date : "dd/MM/yyyy - HH:mm"}}</td>
 			</tr>
 		</table>
 		

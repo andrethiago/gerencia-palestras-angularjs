@@ -1,33 +1,7 @@
-angular.module("GerenciaPalestras").controller("GerenciaPalestrasController", function($scope) {
+angular.module("GerenciaPalestras").controller("GerenciaPalestrasController", function($scope, PalestraService) {
 		$scope.titulo = "Gerenciamento de Palestras"
 
-		$scope.palestras = [ 
-			{
-				"id" : 1,
-				"nome" : "Conhecendo Angular JS",
-				"autor" : "André Thiago"
-			}, 
-			{
-				"id" : 2,
-				"nome" : "Apresentando Spring MVC",
-				"autor" : "Roy Johnson"
-			}, 
-			{
-				"id" : 3,
-				"nome" : "Mapeamento ORM com Hibernate",
-				"autor" : "Gavin King"
-			}, 
-			{
-				"id" : 4,
-				"nome" : "Modelando com base em DDD",
-				"autor" : "Eric Evans"
-			}, 
-			{
-				"id" : 5,
-				"nome" : "Microservice Patterns",
-				"autor" : "Martin Fowler"
-			} 
-		];
+		$scope.palestras = PalestraService.getPalestras();
 		
 		$scope.adicionarPalestra = function(palestra) {
 			$scope.palestras.push(palestra);
