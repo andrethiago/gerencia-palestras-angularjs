@@ -6,8 +6,8 @@ describe("GerenciaPalestrasController", function() {
 		var palestraService;
 		
 		// cria um PalestraService que é uma dependência do Controller
-		angular.mock.inject(function(_PalestraService_) {
-			palestraService = _PalestraService_;
+		angular.mock.inject(function(PalestraService) {
+			palestraService = PalestraService;
 		});
 		
 		angular.mock.inject(function($controller, $rootScope) {
