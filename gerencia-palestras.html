@@ -30,6 +30,7 @@
 <script type="text/javascript" src="app/app.module.js"></script>
 <script type="text/javascript" src="app/GerenciaPalestrasController.js"></script>
 <script type="text/javascript" src="app/PalestraService.js"></script>
+<script type="text/javascript" src="app/MostraMensagemDirective.js"></script>
 
 </head>
 <body ng-controller="GerenciaPalestrasController">
@@ -40,6 +41,8 @@
 			<h2>{{titulo}}</h2>
 		</div>
 
+
+		<div ng-show="mensagemSucesso" mostra-mensagem tipo="'success'" mensagem="mensagemSucesso"></div>
 
 		<table class="table table-hover">
 			<tr>
@@ -66,7 +69,7 @@
 		<input class="form-control" type="text" ng-model="palestra.autor" placeholder="Autor da Palestra" />
 		
 		<button class="btn btn-primary btn-block" ng-click="adicionarPalestra(palestra)" ng-disabled="!palestra.nome || !palestra.autor">Adicionar Palestra</button>
-		<button class="btn btn-danger btn-block" ng-hide="!temPalestraSelecionada()" >Apagar Palestra</button>
+		<button class="btn btn-danger btn-block" ng-hide="!temPalestraSelecionada()" ng-click="apagarPalestras()" >Apagar Palestra</button>
 		
 	
 	</div>
