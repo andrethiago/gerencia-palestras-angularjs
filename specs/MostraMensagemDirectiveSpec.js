@@ -1,6 +1,6 @@
 describe("MostaMensagemDirective", function() {
 	
-	it("Deve atribuir corretamente o tipo de alerta e o valor da mensagem", function() {
+	it("Deve compilar corretamente a diretiva", function() {
 		
 		var scope, diretiva;
 		var mensagem = 'Operação realizada com sucesso!';
