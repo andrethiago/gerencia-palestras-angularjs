@@ -3,21 +3,13 @@ describe("GerenciaPalestrasController", function() {
 	beforeEach(function(){
 		angular.mock.module("GerenciaPalestras");
 		
-		var palestraService;
-		
-		// cria um PalestraService que é uma dependência do Controller
-		angular.mock.inject(function(PalestraService) {
-			palestraService = PalestraService;
-		});
-		
 		angular.mock.inject(function($controller, $rootScope) {
 			// cria o $scope
 			$scope = $rootScope.$new();
 			
 			// injeta o $scope no nosso controller utilizando o decorator $controller
 			$controller("GerenciaPalestrasController", {
-				$scope : $scope,
-				PalestraService : palestraService
+				$scope : $scope
 			});
 		});
 	});
