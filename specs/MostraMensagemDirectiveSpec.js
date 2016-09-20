@@ -10,9 +10,7 @@ describe("MostaMensagemDirective", function() {
 		angular.mock.inject(function($compile, $rootScope){
 			scope = $rootScope.$new();
 			
-			var elemento = angular.element(
-					"<div mostra-mensagem tipo=\"'success'\" mensagem=\"'"+ mensagem +"'\"></div>");
-			diretiva = $compile(elemento)(scope);
+			diretiva = $compile("<div mostra-mensagem tipo=\"'success'\" mensagem=\"'"+ mensagem +"'\"></div>")(scope);
 			scope.$digest();
 		});
 		

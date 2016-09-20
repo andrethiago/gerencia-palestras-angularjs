@@ -42,7 +42,7 @@ describe("GerenciaPalestrasController", function() {
 		expect($scope.temPalestraSelecionada()).toBe(true);
 	});
 	
-	it("A adição de palestras acresenta um novo elemento à lista de palestras.", function() {
+	it("A adição de palestras acrescenta um novo elemento à lista de palestras.", function() {
 		// pego uma palestra qualquer e marco como true
 		var quantidadePalestras = $scope.palestras.length;
 		var novaPalestra = {'nome' : 'Nova Palestra', 'autor': 'Nome do Autor'};
